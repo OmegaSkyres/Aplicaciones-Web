@@ -1,0 +1,58 @@
+/* *{
+    border: 1px solid yellow;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    height:100%;
+}
+
+body{
+    font-family: sans-serif;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgb(255,255,255));
+    height:100%;
+    
+}
+
+h1{
+    color: silver;
+    text-align: center;
+    background-color: black;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+h3{
+    color: silver;
+    text-align: center;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+h4{
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    padding-left: 10px;
+
+}
+
+
+strong {
+    color: orange;
+    font-weight: bold;
+}
+
+ul{
+    margin-left: 60px;
+    color: white;
+}
+
+
