@@ -1,3 +1,4 @@
+
 .rojo {
     color:red;
 }
@@ -6,4 +7,57 @@
 }
 #cafeteria {  
     font-style: italic;
+}
+
+img[src$="png"] {
+    background:black;
+}
+
+h1{
+    color: silver;
+    text-align: center;
+    background-color: red;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.enlace{
+    border: 1px solid black;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+.semana{
+    background-color: grey;
+}
+.amarillo{
+    background-color: yellow;
+}
+.rosa{
+    background-color: orchid;
+}
+.rosaclaro{
+    background-color: pink;
+}
+.verde{
+    background-color: limegreen;
+}
+.verdeclaro{
+    background-color: lightgreen;
+}
+
+table{
+    background-color: silver;
+}
+
+a:hover{
+    background-color: grey;
+    border: 1px solid black;
+}
+#deportes tr:nth-child(even){
+    background-color: gray;
+}
+#deportes tr:nth-child(odd){
+    background-color: white;
 }
