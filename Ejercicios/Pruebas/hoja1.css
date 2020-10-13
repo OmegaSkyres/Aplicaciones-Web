@@ -1,0 +1,20 @@
+* {margin:0; padding:0}
+body { font-family: sans-serif; }
+
+a{
+    border:inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+
+
+}
+
+p.cuadro {
+    border: 2px dashed blue;
+    padding: 20px;
+}
+
+
+
+
+

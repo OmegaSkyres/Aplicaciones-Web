@@ -1,0 +1,20 @@
+* {margin:0; padding:0}
+h1{
+    font-family: 'Pacifico', cursive;
+}
+
+p{
+    margin: 10px;
+    padding: 10px;
+}
+
+p:nth-child(even){
+    background-color: rebeccapurple;
+    border: 4px solid purple;
+    font-family: 'Shadows Into Light', cursive;
+}
+p:nth-child(odd) {
+    background-color: springgreen;
+    border: 4px solid green;
+    font-family: 'Piedra', cursive;
+}
