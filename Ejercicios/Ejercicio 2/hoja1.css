@@ -1,0 +1,47 @@
+/* *{
+    border: 1px solid yellow;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif ;
+    font-weight: normal;
+    /* border: solid red; */
+}
+
+.titulo{
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+}
+
+.secundario{
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+}
+
+div.secundario p{
+    margin-left: 10px;
+    padding: 5px
+    
+
+}
+
+h2{
+    padding-top: 40px;
+    padding-bottom: 5px;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+    
+a{
+    color: #1177D1;
+    text-decoration: none;
+    padding-right: 20px;
+}
