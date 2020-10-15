@@ -1,0 +1,31 @@
+* {
+    margin:0;
+    padding:0; 
+    /* border: 1px solid red; */
+}
+p {
+    /* margin: 12px; */
+    padding: 5px;
+}
+div.flotante {
+    text-align: center;
+    float: right;
+    width: 25%;
+    margin: 40px;
+    padding: 20px;
+    background-color: aquamarine;
+    border: 1px solid grey;
+    border-radius: 5%;
+}
+
+div.flotante img{
+    width: 114px;
+    height: 114px;
+}
+
+
+
+
+
+
+

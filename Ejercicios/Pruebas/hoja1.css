@@ -1,18 +1,20 @@
-* {margin:0; padding:0}
-body { font-family: sans-serif; }
-
-a{
-    border:inherit;
-    padding-left: inherit;
-    padding-right: inherit;
-
-
+* {
+    /* margin:0;
+    padding:0; */
+    border: 1px solid red;
+}
+p {
+    /* margin: 12px; */
+    padding: 5px;
+    background-color: #F0F0FF;
+}
+div.flotante {
+    float: left;
+    width: 40%;
+    background-color: #FFA000;
 }
 
-p.cuadro {
-    border: 2px dashed blue;
-    padding: 20px;
-}
+
 
 
 
