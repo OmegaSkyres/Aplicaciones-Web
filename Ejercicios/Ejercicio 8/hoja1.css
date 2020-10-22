@@ -1,0 +1,62 @@
+* {
+    margin:0;
+    padding:0;
+    font-size: 30px;
+    font-family: sans-serif;
+    color:white
+
+    /* border: 1px solid red; */
+} 
+.contenedor {
+    width: 300px;
+    padding: 10px;
+    display: grid;
+    background-color: dimgray;
+    grid-row: 2px;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    text-align: center;
+}
+.elemento {
+    font-size: 30px;
+    background-color: lime;
+    border: solid black 2px;
+}
+
+.numeros{
+    background-color:hotpink; 
+}
+
+.numeros0{
+    background-color:hotpink; 
+    grid-row: 6 / 7 ;
+    grid-column: 1 / span 3;
+}
+.operadores{
+    background-color: limegreen;
+}
+
+.teclasEspeciales{
+    background-color: deepskyblue;
+    grid-row: 2 / 3 ;
+    grid-column: 1 / span 2;
+}
+
+.teclaIgual{
+    background-color: deepskyblue;
+    grid-row: 2 / 3 ;
+    grid-column: 3 / span 2;
+}
+
+.resultado{
+    background-color: white;
+    color: dimgray;
+    grid-column: 1 / span 4;
+    grid-row: 1 / 1;
+}
+
+
+
+
+
+
