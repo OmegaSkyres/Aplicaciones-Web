@@ -1,0 +1,100 @@
+*{
+    font-family: Helvetica, sans-serif;
+    /* border: solid red 1px; */
+}
+
+div.encabezado {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+}
+
+div.titulo{
+    padding: 20px 20px 0px;
+    align-items: center;
+    text-align: left;
+    font-size: 18px;
+}
+
+div.informacionUsuario{
+    display: none
+}
+
+div.panelPrincipal{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top:200px;
+    clear: left;
+}
+
+ul{
+    list-style: disc;
+}
+.tareaPendiente{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    margin-left: 20px;
+    height: 70px;
+    font-size: 12px;;
+    list-style-type: square;
+    
+
+}
+
+.parteD{
+    display: flex;
+    width: 75%;
+}
+
+.nombreTarea{
+    align-self: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.contendorTags{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag{
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    align-self: center;
+    
+}
+
+.botonFinalizar{
+    display: none;
+}
+ 
+.tareaFinalizada{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 70px;
+    text-decoration: line-through;
+    font-size: 12px;;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.botonEliminarTareas{
+   display: none;
+}
+
+.form{
+    display: none;
+}
+
+.ocult{
+    display: none;
+}
+

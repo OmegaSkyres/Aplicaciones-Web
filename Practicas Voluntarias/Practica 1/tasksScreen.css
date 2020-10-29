@@ -13,6 +13,8 @@ div.encabezado {
     text-align: left;
     width: 100%;
     z-index: 100;
+    flex-grow: 1;
+    
 
 }
 
@@ -62,8 +64,8 @@ div.panelPrincipal{
     flex-direction: column;
     background-image: url(images/prism.png);
     padding: 20px;
-    padding-top:200px;
-    clear: left;
+    padding-top:200px;  
+    height:100%;
 }
 
 .tareaPendiente{
@@ -196,4 +198,8 @@ div.panelPrincipal{
     width: 25%;
 }
 
-
+ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
