@@ -6,6 +6,11 @@
     /* border: solid red 1px; */
 }
 
+a:hover{  
+    background-color: aquamarine;
+    cursor: alias;
+}
+
 div.encabezado {
     display: flex;
     position: fixed;
@@ -119,6 +124,10 @@ div.panelPrincipal{
     margin: 20px;
 }
 
+.botonFinalizar:hover{
+    background-color: aquamarine;
+    cursor: alias;
+}
 .botonFinalizar a{
     text-decoration: none;
     color: white;
@@ -159,6 +168,11 @@ div.panelPrincipal{
     text-align: center;
     align-items: center;
     
+}
+
+.botonEliminarTareas:hover{
+    background-color: aquamarine;
+    cursor: alias;
 }
 .botonEliminarTareas a{
     color: white;
