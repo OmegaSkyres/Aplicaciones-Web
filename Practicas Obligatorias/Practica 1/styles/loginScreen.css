@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    /* border: solid red 1px; */
+}
+
+div.panelPrincipal{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/prism.png);
+    padding: 20px;
+    padding-top:200px;  
+}
+
+.form form{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+}
+
+#search{
+    width: 75%;
+    margin-right: 50px;
+}
+
+#button{
+    width: 25%;
+}
