@@ -47,8 +47,7 @@ div.panelPrincipal h1{
     flex-direction: column;
 }
 
-     
-}
+    
 
 #button1{
     align-self: center;
@@ -77,12 +76,4 @@ div.panelPrincipal h1{
 
 #button2:hover{
     background-color: yellowgreen;
-}
-
-#label1{
-    
-}
-
-#label2{
-    
 }
