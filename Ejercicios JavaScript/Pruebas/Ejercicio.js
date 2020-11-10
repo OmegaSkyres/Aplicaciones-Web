@@ -1,23 +1,59 @@
 "use strict";
 
-var x = 10;
-console.log(typeof(x)); // number
-x = 1.23;
-console.log(typeof(x)); // number
+// let vector = ["Hola","Roberto","Torres"];
 
-x = true;
-console.log(typeof(x)); // boolean
-x = false;
-console.log(typeof(x)); // boolean
-console.log(typeof(3 < 4)); // boolean
+// function mapLenghts(array){
+//     let result = [];
+//     for(let element of array){
+//         result.push(element.length);
+//     }
 
-x = "cadena";
-console.log(typeof(x)); // string
-let z;
-console.log(typeof(z)); // undefined
+//     return result;
+// }
 
-let numero = 25
-let cadena = "25"
+// console.log(mapLenghts(vector));
 
-if(cadena === numero) console.log("Si");
-else console.log("No");
+// let numeros = [3,2,5,7,9,1]
+
+// function filterSup(array,x){
+//     let result = [];
+//     if(Array.isArray(array)){
+//         for(let element of array){
+//             if(element > x){
+//                 result.push(element);
+//             }
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(filterSup(numeros,4));
+
+// let numeros = [3,2,5,7,9,1]
+
+// function filterSup2(array,x){
+//     return array.filter(element => element > x);
+// }
+
+// console.log(filterSup2(numeros,4));
+
+// let numeros = [filterSup, filterSup2];
+
+// function everyFunction2(array){
+//     return array.every(element => element instanceof Function);
+// }
+
+// console.log(everyFunction2(numeros));
+
+// function someUndefined2(array){
+//     return array.some(element => typeof(element) ==  "undefined");
+// }
+
+// console.log(someUndefined2(numeros));
+
+let numeros =[2,3];
+function reduceSquare2(array){
+   return array.reduce((ac, n) => ac + n*n,0); 
+}
+
+console.log(reduceSquare2(numeros));

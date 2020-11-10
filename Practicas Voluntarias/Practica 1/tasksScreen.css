@@ -84,6 +84,7 @@ div.panelPrincipal{
     margin-left: 200px;
     margin-right: 200px;
     height: 70px;
+    
 
 }
 
@@ -94,13 +95,11 @@ div.panelPrincipal{
 
 .nombreTarea{
     align-self: center;
-    flex-wrap: wrap;
     margin: 10px;
 }
 
 .contendorTags{
     display: flex;
-    flex-wrap: wrap;
 }
 
 .tag{
@@ -122,6 +121,7 @@ div.panelPrincipal{
     border-radius: 5px;
     padding: 10px;
     margin: 20px;
+    vertical-align: middle;
 }
 
 .botonFinalizar:hover{
