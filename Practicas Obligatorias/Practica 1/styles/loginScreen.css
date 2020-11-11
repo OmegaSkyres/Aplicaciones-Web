@@ -20,7 +20,7 @@ div.panelPrincipal{
 }
 
 div.panelPrincipal h1{
-    color: mediumblue;
+    color: lightskyblue;
     text-align: center;
     align-items: center;
     margin-top: 20px;
@@ -32,14 +32,16 @@ div.panelPrincipal h1{
 }
 
 .form{
+    color: snow;
+    border: solid 3px steelblue;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
     margin: 10px;
     margin-left: 30%;
     margin-right: 30%;
-    padding: 3px;
-    background-color: teal;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.123);
 }
 
 .form form{
@@ -50,24 +52,31 @@ div.panelPrincipal h1{
     
 
 #button1{
+    font-size: 17px;
+    color: snow;
     align-self: center;
     width: 25%;
     margin: 10px;
-    background-color:#FFD27D;
+    background-color:steelblue;
     border-color: #d8d8d8;
     border-width: 3px;
     border-style: solid;
     border-radius:35px;
 }
 #button1:hover{
-    background-color: yellowgreen;
+    background-color: skyblue;
+    cursor: pointer;
 }
 
 #button2{
+    font-size: 17px;
+    text-decoration: none;
+    text-align: center;
+    color: snow;
     align-self: center;
     width: 25%;
     margin: 10px;
-    background-color:#FFD27D;
+    background-color:steelblue;
     border-color: #d8d8d8;
     border-width: 3px;
     border-style: solid;
@@ -75,5 +84,6 @@ div.panelPrincipal h1{
 }
 
 #button2:hover{
-    background-color: yellowgreen;
+    background-color: skyblue;
+    cursor: pointer;
 }
