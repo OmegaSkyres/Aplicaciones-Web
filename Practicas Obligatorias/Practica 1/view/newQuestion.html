@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="../styles/newQuestion.css" media="screen"/> 
+</head>
+<body>
+    <div class="encabezado">
+        <div class="parte1">
+            <div class="botonera">
+                <a href="">Preguntas</a>
+                <a href="">Sin responder</a>
+                <a href="">Usuarios</a>
+            </div>
+            <div class="titulo">
+                <h1>404</h1>
+            </div>
+            <div class="informacionUsuario">
+                <img src="../images/User_Circle.png">
+                <p>Robertito@gmail.com</p>
+                <a href="../view/login.html">Cerrar Sesion</a>
+            </div> 
+        </div>
+        <div class="parte2">
+            <form action="procesar_formulario" method="método">
+                <input type="submit" id="button1" value="Buscar">
+                <input type="text" id="search1" name="Busqueda *" value="Buscar por titulo/cuerpo de pregunta">
+            </form>
+        </div>
+    </div>
+    <div class="panelPrincipal">
+        <div id="cabecera">
+            <h2>Formular una pregunta</h2>
+        </div>
+        <div id="formulario">
+            <form action="procesar_formulario" method="método"> 
+                <label id="label1" for="Name"><strong>Titulo</strong></label>
+                <label id="label2" for="Name">Se especifica e imagina que estas haciendo la pregunta a otra persona</label>
+                <input type="text" id="tituloPregunta" name="tituloPregunta" value="Cual es tu pregunta sobre aplicaciones web">
+                <label id="label3" for="Name"><strong>Cuerpo</strong></label>
+                <label id="label4" for="Name">Incluye toda la información que alguien necesitaria para responder tu pregunta</label>
+                <textarea cuerpoPregunta id="cuerpoPregunta" name="cuerpoPregunta" maxlength="150" rows="10" cols="40">
+                <label id="label5" for="Name"><strong>Etiquetas</strong></label>
+                <label id="label6" for="Name">Añade hasta 5 etiquetas para descubrir sobre que trata tu pregunta</label>
+                <input type="text" id="tituloPregunta" name="tituloPregunta" value="Por ejemplo: @node@express">
+            </form>
+        </div>
+        <div id="botonera">
+            <a id="boton href="">Publicar tu pregunta</a> 
+        </div>
+    </div>
+   
+    
+</body>
+</html>

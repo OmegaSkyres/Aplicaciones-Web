@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    /* border: solid red 1px; */
+    border: solid red 1px;
 }
 
 html, body {
@@ -124,3 +124,48 @@ div.informacionUsuario{
     border-style: solid;
     border-radius:35px;
 }
+
+
+.panelPrincipal{
+    padding-top: 304px;
+}
+
+#cabecera{
+    text-align: center;
+    margin-top: 20px;
+    height: 80px;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+#botonera{
+    align-items: center;
+}
+
+#boton{
+    text-decoration: none;
+    font-size: 17px;
+    color: snow;
+    margin: 10px;
+    background-color:steelblue;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+}
+
+

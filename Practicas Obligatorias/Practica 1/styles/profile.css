@@ -124,3 +124,105 @@ div.informacionUsuario{
     border-style: solid;
     border-radius:35px;
 }
+
+
+
+
+
+
+
+
+
+
+.cuadro{
+    padding-top: 304px;
+    display: grid;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 3;
+}
+
+#estadisticas{
+    grid-column: 2/ span 2;
+    grid-row: 1/ span 1;
+}
+
+.numeros{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#medallas{
+    grid-column: 1/ span 3;
+    grid-row: 4/ span 1;
+}
+
+.cuadroBronce{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/ span 1;
+    grid-row: 5/ span 4;
+}
+
+.cuadroPlata{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/ span 1;
+    grid-row: 5/ span 4;
+}
+
+.cuadroOro{
+    display: flex;
+    flex-direction: column;
+    grid-column: 3/ span 1;
+    grid-row: 5/ span 4;
+}
+
+.oro{
+    display: flex;
+    flex-direction: column;
+    background: rgb(255,231,0);
+    background: linear-gradient(90deg, rgba(255,231,0,1) 40%, rgba(247,247,247,1) 50%, rgba(255,231,0,1) 60%);
+}
+
+.plata{
+    display: flex;
+    flex-direction: column;
+    background: rgb(201,201,201);
+    background: linear-gradient(90deg, rgba(201,201,201,1) 40%, rgba(247,247,247,1) 50%, rgba(201,201,201,1) 60%);
+}
+
+.bronce{
+    display: flex;
+    flex-direction: column;
+    background: rgb(212,138,0);
+    background: linear-gradient(90deg, rgba(212,138,0,1) 40%, rgba(247,247,247,1) 50%, rgba(212,138,0,1) 60%);
+}
+
+.listaMedallas{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#medallaBronce{
+    color: rgb(253, 191, 132);
+    background-color: rgb(48, 48, 48);
+}
+
+
+#medallaPlata{
+    color: rgb(165, 165, 165);
+    background-color: rgb(48, 48, 48);
+}
+
+#medallaOro{
+    color: rgb(255, 223, 119);
+    background-color: rgb(48, 48, 48);
+}
+
