@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    border: solid red 1px;
+    /* border: solid red 1px; */
 }
 
 html, body {
@@ -132,7 +132,6 @@ div.informacionUsuario{
 
 #cabecera{
     text-align: center;
-    margin-top: 20px;
     height: 80px;
 }
 
@@ -145,10 +144,20 @@ div.informacionUsuario{
 #formulario form{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 #botonera{
+    display: flex;
+    padding-left: 35%;
+    padding-right: 35%;
     align-items: center;
+    text-align: center;
+}
+
+#cuerpoPregunta{
+    height: 100px;
+    text-align: start;
 }
 
 #boton{
