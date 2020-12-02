@@ -1,4 +1,4 @@
-"use strict";
+user"use strict";
 
 const mysql = require("mysql");
 

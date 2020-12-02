@@ -14,7 +14,7 @@ html, body {
 div.panelPrincipal{
     display: flex;
     flex-direction: column;
-    background-image: url(../images/prism.png);
+    background-image: url(../../../images/prism.png);
     padding: 20px;
     height: 100%;
 }
