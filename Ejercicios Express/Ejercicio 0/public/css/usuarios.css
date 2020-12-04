@@ -1,0 +1,26 @@
+* {
+    margin:0;
+    padding:0;
+    /* border: 1px solid red; */
+} 
+
+h1{
+    text-align: center;
+    color: gray;
+}
+
+.usu{
+    display: flex;
+    justify-content: center;
+}
+.usu th{
+    text-align: center;
+    background-color: gray;
+    border:2px solid grey;
+}
+
+.usu tr{
+    text-align: center;
+    background-color: yellow;
+    border:2px solid grey;
+}
