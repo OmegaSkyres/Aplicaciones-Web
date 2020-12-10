@@ -33,7 +33,7 @@ const usuarios = [
 
      app.get("/users.html", function(request, response) {
         response.status(200);
-        response.redirect("/usuarios.htmlç");
+        response.redirect("/usuarios.html");
         });
 
      app.get("/socios.html", function(request, response) {
@@ -41,7 +41,7 @@ const usuarios = [
         response.redirect("/usuarios.html");
         });
 
-    app.get("/usuarios.css", function(request, response) {
-        
-        });
+    app.get("/public/css/usuarios.css", function(request, response) {
+        response.sendFile(path.join(__dirname, "public", "css", "usuarios.css"));
+    });
         
