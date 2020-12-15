@@ -15,7 +15,6 @@ const ficherosEstaticos = path.join(__dirname, "public");
 
 app.use(express.static(ficherosEstaticos));
 
-bodyParser
 let usuarios = ["Javier Montoro", "Dolores Vega", "Beatriz Nito"];
 
 app.use(bodyParser.urlencoded({ extended: false }));
