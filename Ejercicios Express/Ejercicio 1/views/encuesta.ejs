@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="css/encuesta.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h2>
+        <%=pregunta%>
+    </h2>
+    <form method="GET" action="encuesta_get">
+        <% opciones.forEach(function(opcion) {%>
+            <div>
+                <input type="radio" name="opcion" value=<%=opcion.texto%> >
+                <%=opcion.texto%>
+            </div>
+            <%});%>
+                <div class="boton">
+                    <input type="submit" value="Enviar">
+                </div>
+    </form>
+</body>
+
+</html>

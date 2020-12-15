@@ -1,40 +1,88 @@
-const express = require("express");
+"use strict";
+const http = require("http");
+const url = require("url");
 const path = require("path");
-const fs = require("fs");
+const express = require("express");
+
 const app = express();
-const morgan = require("morgan");
+
+var pregunta = "¿Cuál es tu color favorito?";
+var opciones = [{
+        texto: "Rojo",
+        numeroVotos: 0
+    },
+    {
+        texto: "Azul",
+        numeroVotos: 0
+    },
+    {
+        texto: "Verde",
+        numeroVotos: 0
+    },
+    {
+        texto: "Otro",
+        numeroVotos: 0
+    }
+];
+
+
+
+
+// var pregunta = "¿Qué país elegirías para vivir?";
+// var opciones = [{
+//         texto: "EEUU",
+//         numeroVotos: 0
+//     },
+//     {
+//         texto: "Italia",
+//         numeroVotos: 0
+//     },
+//     {
+//         texto: "Australia",
+//         numeroVotos: 0
+//     },
+//     {
+//         texto: "Japón",
+//         numeroVotos: 0
+//     }
+// ];
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "public")));
-app.use(morgan("dev"));
 
-let rojo = 0, azul = 0, verde = 0, otro = 0;
+const ficherosEstaticos =
+    path.join(__dirname, "public");
 
-app.get("/procesar_get", function (request, response) {
-    switch (request.query.color) {
-        case "rojo": rojo++; break;
-        case "azul": azul++; break;
-        case "verde": verde++; break;
-        case "otro": otro++; break;
-    }
-    response.render("tabla", {
-        "rojo": rojo,
-        "azul": azul,
-        "verde": verde,
-        "otro": otro
+app.use(express.static(ficherosEstaticos));
+
+
+app.get("/", function(request, response) {
+    // response.status(200);
+    response.render("encuesta", { opciones: opciones, pregunta: pregunta });
+});
+
+
+app.get("/encuesta_get", function(request, response) {
+    // Actualizar la variable opciones
+
+    opciones.forEach(function(opcion) {
+        if (opcion.texto == request.body.opcion) {
+            opcion.numeroVotos++;
+        }
+
     });
+    // enviar la plantilla
+    response.render("resultados", { opciones: opciones });
 });
 
-app.get("/public/styles/encuestaStyle.css", function(request, response) {
-    response.sendFile(path.join(__dirname, "public", "styles", "encuestaStyle.css"));
-});
+
+
 
 app.listen(3000, function(err) {
     if (err) {
-        console.error("No se pudo inicializar el servidor: " + err.message);
+        console.error("No se pudo inicializar el servidor: " +
+            err.message);
     } else {
         console.log("Servidor arrancado en el puerto 3000");
     }
 });
-

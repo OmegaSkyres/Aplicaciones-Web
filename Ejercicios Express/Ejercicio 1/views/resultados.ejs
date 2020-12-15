@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resultados</title>
+        <link rel="stylesheet" href="css/resultados.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2>Resultados</h2>
+        <table>
+            <tr>
+                <th>Respuesta</th><th>Número de votos</th>
+            </tr>
+            <% opciones.forEach(function(opcion) {%>
+                <tr><th><%=opcion.texto%></th><th><%=opcion.numeroVotos%></th></tr>
+            <%});%>
+        </table>
+    </body>
+</html> 

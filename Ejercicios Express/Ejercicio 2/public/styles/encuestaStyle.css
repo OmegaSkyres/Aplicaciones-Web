@@ -1,0 +1,36 @@
+* {
+  margin:0;
+  padding:0;
+  /* border: 1px solid red; */
+} 
+
+body{
+  border: 2px solid purple;
+}
+
+#titulo{
+  color: purple;
+  text-align: center;
+}
+
+.botonera{
+  display: flex;
+  flex-direction: column;
+}
+
+#submit{
+  text-align: center;
+}
+.table{
+  display: flex;
+  justify-content: center;
+}
+.table th{
+  text-align: center;
+  border:2px solid grey;
+}
+
+.table td{
+  text-align: center;
+  border:2px solid grey;
+}
