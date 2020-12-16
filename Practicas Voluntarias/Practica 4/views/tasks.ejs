@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="../img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="../css/tasksScreen.css" media="screen"/> 
+    <link rel="stylesheet" href="../css/tasksPrint.css" media="print"/>
+    
+</head>
+<body>
+    <div class="encabezado">
+        <div class="titulo">
+             <img src="../img/tareas.jpg">
+        </div>
+        <div class="informacionUsuario">
+             <div class="imagen">
+               <img src="../img/null.png">
+             </div>
+             <div class="detalles">
+               <p>Robertito@gmail.com</p>
+               <a href="">DESCONECTAR</a>
+             </div>
+        </div>    
+   </div>
+   <div class="panelPrincipal">
+     <ul>
+          <% taskList.forEach(function(task, index) {%>
+               <%if(tarea.done){%>
+                    <li>
+                         <div class="tareaPendiente">
+                              <div class="parteD">
+                                   <div class="nombreTarea">
+                                        <h2><%=task.text%></h2>
+                                   </div>
+                                   <div class="contendorTags">
+                                        <% task.tags.forEach(function(tag, index) {%>
+                                             <div class="tag"><%=tag%></div>
+                                        <%})%>
+                                   </div>
+                              </div>
+                              
+                              <div class="botonFinalizar">
+                                   <a href="/finish/taskId">MARCAR FINALIZADA</a>
+                              </div>        
+                         </div>
+                    </li>
+               <%}else{%>
+               
+                    <li class="expecial"> 
+                         <div class="tareaFinalizada">
+                              <h2><%=task.text=%></h2>   
+                         </div>
+                    </li>
+               <%}%>
+           <%}%>
+          
+          <li class="ocult">
+               <div class="form"> 
+                    <form action="/addTask" method="POST">
+                         <input type="text" id="search" name="nombre">
+                         <input type="submit" id="button" value="Añadir">
+                    </form>
+               </div>
+          </li>
+          <li class="ocult">
+               <div class="botonEliminarTareas">
+                    <a href="/deleteCompleted">ELIMINAR TAREAS COMPLETAS</a>
+               </div>
+          </li>
+     </ul>  
+   
+</body>
+</html> 
