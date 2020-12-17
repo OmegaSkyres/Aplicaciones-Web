@@ -21,6 +21,7 @@ app.use(express.static(ficherosEstaticos));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(bodyParser.urlencoded({extended : true}));
 
 
 // Arrancar el servidor
@@ -45,7 +46,7 @@ app.get("/tasks",function(request,response){
         }
         else {
             response.status(200);   
-            response.render("tasks", { tasks: result });
+            response.render("tasks", { tasksList: result });
             console.log("Exito en leer tareas");
         }
     });
@@ -58,20 +59,24 @@ app.post("/addTask", function(request,response){
             console.log("Error al insertar una tarea");
         }
         else{
+            console.log("Tarea añadida con exito");
             response.status(200);
             response.redirect("/tasks");
         }   
     })
 })
 
-app.get("/finish/:taskId",function(request,response){
-    daoT.markTaskDone(request.body.id,function(err,result){
+app.get("/finish/:id",function(request,response){
+    let id = parseInt(request.params.id);
+    id = id +1;
+    daoT.markTaskDone(id.toString(),function(err,result){
         if(err){
             console.log("Error al marcar como finalizada");
         }
         else{
             response.status(200);
             response.redirect("/tasks");
+            console.log("Exito en finalizar tarea");
         }
     })
 })
@@ -84,6 +89,7 @@ app.get("/deleteCompleted",function(request,response){
         else{
             response.status(200);
             response.redirect("/tasks");
+            console.log("Exito al borrar las tareas");
         }
     })
 })

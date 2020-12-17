@@ -54,3 +54,11 @@ function createTask(texto){
 }
 
 //console.log(createTask("@AW @practica Preparar práctica AW"));
+
+module.exports = {
+    getToDoTask,
+    findByTag,
+    findByTags,
+    countDone,
+    createTask,
+}

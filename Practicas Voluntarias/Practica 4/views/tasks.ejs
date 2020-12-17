@@ -26,40 +26,42 @@
    </div>
    <div class="panelPrincipal">
      <ul>
-          <% taskList.forEach(function(task, index) {%>
-               <%if(tarea.done){%>
+          <% tasksList.forEach(function(task, index) {%>
+               <% if(!task.done){ %>
                     <li>
-                         <div class="tareaPendiente">
+                         <div id="<%=index%>" class="tareaPendiente">
                               <div class="parteD">
                                    <div class="nombreTarea">
                                         <h2><%=task.text%></h2>
                                    </div>
                                    <div class="contendorTags">
-                                        <% task.tags.forEach(function(tag, index) {%>
+                                        <% task.tags.forEach(function(tag, indexT) { %>
                                              <div class="tag"><%=tag%></div>
-                                        <%})%>
+                                        <% }); %>
                                    </div>
                               </div>
                               
                               <div class="botonFinalizar">
-                                   <a href="/finish/taskId">MARCAR FINALIZADA</a>
+                                   <a href="/finish/<%=index%>">MARCAR FINALIZADA</a>
                               </div>        
                          </div>
                     </li>
-               <%}else{%>
-               
-                    <li class="expecial"> 
-                         <div class="tareaFinalizada">
-                              <h2><%=task.text=%></h2>   
-                         </div>
-                    </li>
-               <%}%>
-           <%}%>
-          
+               <% } else { %>
+                    <ul>
+                         <li class="expecial"> 
+                              <div id="<%=index%>" class="tareaFinalizada">
+                                   <h2><%=task.text%></h2>
+                              </div>
+                         </li>
+                    </ul>
+                    
+                  
+               <% } %>
+          <% }); %>
           <li class="ocult">
                <div class="form"> 
                     <form action="/addTask" method="POST">
-                         <input type="text" id="search" name="nombre">
+                         <input type="text" id="search" name="text" required>
                          <input type="submit" id="button" value="Añadir">
                     </form>
                </div>
@@ -69,7 +71,6 @@
                     <a href="/deleteCompleted">ELIMINAR TAREAS COMPLETAS</a>
                </div>
           </li>
-     </ul>  
-   
+     </ul>
 </body>
 </html> 
