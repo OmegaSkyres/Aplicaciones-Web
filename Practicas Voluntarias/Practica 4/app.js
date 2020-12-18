@@ -67,9 +67,7 @@ app.post("/addTask", function(request,response){
 })
 
 app.get("/finish/:id",function(request,response){
-    let id = parseInt(request.params.id);
-    id = id +1;
-    daoT.markTaskDone(id.toString(),function(err,result){
+    daoT.markTaskDone(request.params.id,function(err,result){
         if(err){
             console.log("Error al marcar como finalizada");
         }

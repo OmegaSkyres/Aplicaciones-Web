@@ -129,6 +129,33 @@ class DAOTasks {
         });
     }
 
+    deleteTasks(ids, callback) {
+        this.pool.getConnection(function (err, connection) {
+            if (err) {
+                callback(new Error("Error de conexión a la base de datos"));
+            } else {
+                var sql = "DELETE FROM task WHERE id IN ("
+
+                for (var i = 0; i < ids.length; i++) {
+                    sql += "?,"
+                }
+                sql = sql.substr(0, sql.length - 1);
+                sql += ");"
+
+                connection.query(sql, ids, function (err, rdo) {
+                    connection.release();
+                    if (err) {
+                        callback(new Error("Error de acceso a la base de datos"), null);
+                    } else {
+                        callback(null);
+                    }
+                });
+            }
+        });
+    }
+
+
+
     markTaskDone(idTask, callback){
         this.pool.getConnection(function(err, connection) {
             if (err) { 

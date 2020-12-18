@@ -7,15 +7,19 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-const app = express();
 const session = require("express-session");
 const mysqlSession = require("express-mysql-session");
+
+
+
+const app = express();
 const MySQLStore = mysqlSession(session);
+
 const sessionStore = new MySQLStore({
-host: "localhost",
-user: "root",
-password: "",
-database: "miBD" });
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "404" });
 
 const middlewareSession = session({
     saveUninitialized: true,
