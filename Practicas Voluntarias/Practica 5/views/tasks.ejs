@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="../public/img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="styles/tasksScreen.css" media="screen"/> 
+    <link rel="stylesheet" href="styles/tasksPrint.css" media="print"/>
+    
+</head>
+<body>
+    <div class="encabezado">
+        <div class="titulo">
+             <img src="../img/tareas.jpg">
+        </div>
+        <div class="informacionUsuario">
+             <div class="imagen">
+               <img src="/imagenUsuario">
+             </div>
+             <div class="detalles">
+               <p><%=email%></p>
+               <a href="/logout">DESCONECTAR</a>
+             </div>
+        </div>    
+   </div>
+   <div class="panelPrincipal">
+     <ul>
+          <% tasksList.forEach(function(task, index) {%>
+               <% if(!task.done){ %>
+                    <li>
+                         <div id="<%=index%>" class="tareaPendiente">
+                              <div class="parteD">
+                                   <div class="nombreTarea">
+                                        <h2><%=task.text%></h2>
+                                   </div>
+                                   <div class="contendorTags">
+                                        <% task.tags.forEach(function(tag, indexT) { %>
+                                             <div class="tag"><%=tag%></div>
+                                        <% }); %>
+                                   </div>
+                              </div>
+                              
+                              <div class="botonFinalizar">
+                                   <a href="/finish/<%=index%>">MARCAR FINALIZADA</a>
+                              </div>        
+                         </div>
+                    </li>
+               <% } else { %>
+                    <ul>
+                         <li class="expecial"> 
+                              <div id="<%=index%>" class="tareaFinalizada">
+                                   <h2><%=task.text%></h2>
+                              </div>
+                         </li>
+                    </ul>
+                    
+                  
+               <% } %>
+          <% }); %>
+          <li class="ocult">
+               <div class="form"> 
+                    <form action="/addTask" method="POST">
+                         <input type="text" id="search" name="text" required>
+                         <input type="submit" id="button" value="Añadir">
+                    </form>
+               </div>
+          </li>
+          <li class="ocult">
+               <div class="botonEliminarTareas">
+                    <a href="/deleteCompleted">ELIMINAR TAREAS COMPLETAS</a>
+               </div>
+          </li>
+     </ul>
+</body>
+</html> 

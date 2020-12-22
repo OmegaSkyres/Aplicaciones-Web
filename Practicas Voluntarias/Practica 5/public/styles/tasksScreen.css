@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    /* border: solid red 1px; */
+}
+
+a:hover{  
+    background-color: aquamarine;
+    cursor: alias;
+}
+
+div.encabezado {
+    display: flex;
+    position: fixed;
+    background-color: steelblue;
+    text-align: left;
+    width: 100%;
+    z-index: 100;
+    flex-grow: 1;
+    
+
+}
+
+div.titulo{
+    padding: 20px 20px 0px;
+    width: 75%;
+    background-color: steelblue;
+}
+
+div.informacionUsuario{
+    display: flex;
+    font-size: 20px;
+    padding: 10px;
+    float:right;
+}
+
+.imagen{
+    align-self: center;
+}
+
+.detalles{
+    padding:30px;
+    text-align: center;
+    align-self: center;
+}
+
+div.informacionUsuario p{
+    margin-bottom: 20px;
+}
+div.informacionUsuario a{
+    text-decoration: none;
+    padding: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: white;
+}
+
+div.informacionUsuario img{
+    background-color: palegreen;
+    padding: 10px;
+}
+
+div.panelPrincipal{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/prism.png);
+    padding: 20px;
+    padding-top:200px;  
+    height:100%;
+}
+
+.tareaPendiente{
+    display: flex;
+    flex-direction: row;
+    background-color: CornflowerBlue;
+    color: whitesmoke;
+    border-radius: 15px;
+    border-color: whitesmoke;
+    margin: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 70px;
+    
+
+}
+
+.parteD{
+    display: flex;
+    width: 75%;
+}
+
+.nombreTarea{
+    align-self: center;
+    margin: 10px;
+}
+
+.contendorTags{
+    display: flex;
+}
+
+.tag{
+    flex-direction: column;
+    color: whitesmoke;
+    border-radius: 15px;
+    border: whitesmoke solid 3px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    align-self: center;
+    
+}
+
+.botonFinalizar{
+    display: flex;
+    background-color: FireBrick;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    vertical-align: middle;
+}
+
+.botonFinalizar:hover{
+    background-color: aquamarine;
+    cursor: alias;
+}
+.botonFinalizar a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+.tareaFinalizada{
+    display: flex;
+    flex-direction: row;
+    background-color: silver;
+    color: slategray;
+    text-decoration: line-through;
+    opacity: 0.33;
+    border-radius: 15px;
+    margin: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-left: 10px;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.botonEliminarTareas{
+    background-color: firebrick;
+    color: whitesmoke;
+    border: whitesmoke solid 3px;
+    border-radius: 15px;
+    margin: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    height: 20px;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.botonEliminarTareas:hover{
+    background-color: aquamarine;
+    cursor: alias;
+}
+.botonEliminarTareas a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.botonAñadir{
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    border-radius: 15px;;
+}
+
+.form{
+    display: flex;
+    border-radius: 15px;
+    height: 70px;
+    margin: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    background-color: teal;
+}
+
+.form form{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+}
+
+#search{
+    width: 75%;
+    margin-right: 50px;
+}
+
+#button{
+    width: 25%;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
