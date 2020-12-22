@@ -10,7 +10,6 @@ const session = require("express-session");
 const mysqlSession = require("express-mysql-session");
 const DAOTasks = require("./DAOTasks");
 const DAOUsers = require("./DAOUsers");
-const { nextTick } = require("process");
 const MySQLStore = mysqlSession(session);
 const sessionStore = new MySQLStore({
     host: "localhost",
