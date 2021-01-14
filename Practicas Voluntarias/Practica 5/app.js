@@ -18,7 +18,7 @@ const sessionStore = new MySQLStore({
     database: "p3" });
     
     const middlewareSession = session({
-        saveUninitialized: true,
+        saveUninitialized: false,
         secret: "foobar34",
         resave: false,
         store: sessionStore
