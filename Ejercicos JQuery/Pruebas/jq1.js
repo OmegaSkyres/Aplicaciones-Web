@@ -98,11 +98,40 @@
 // });
     
 
-$(function() {
-    $("#añadirElemento").on("click", function() {
-    let nuevoElemento = $("<li>Nuevo elemento</li>");
-    $("#listaNumerada").append(nuevoElemento);
+// $(function() {
+//     $("#añadirElemento").on("click", function() {
+//     let nuevoElemento = $("<li>Nuevo elemento</li>");
+    
+//     });
+// });
+
+$("#elem").on("mousedown", function(event) {
+    console.log(`Posición: ${event.pageX}, ${event.pageY}`);
+    console.log(`Botón pulsado: ${event.which}`);
 });
+
+const IZQUIERDA = 37;
+const DERECHA = 39;
+const ARRIBA = 38;
+const ABAJO = 40;
+$(function() {
+    let parrafo = $("div.parrafo-movil");
+    $("body") .on("keydown", function(event) {
+        let incremento = { x: 0, y: 0 };
+        switch (event.which) {
+            case IZQUIERDA: incremento.x = -3; break;
+            case DERECHA: incremento.x = 3; break;
+            case ARRIBA: incremento.y = -3; break;
+            case ABAJO: incremento.y = 3; break;
+        // ...
+        }
+        let current = parrafo.offset();
+        parrafo.offset({
+            left: current.left + incremento.x,
+            top: current.top + incremento.y
+        });
+        event.preventDefault();
+    });
 });
     
     

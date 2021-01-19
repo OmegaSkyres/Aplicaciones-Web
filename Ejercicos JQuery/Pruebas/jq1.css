@@ -57,3 +57,38 @@
   #mensaje{
       color: red;
   }
+
+  .parrafo {
+    border: 2px dashed green;
+    width: 500px;
+    background-color: lightgreen;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .tamaño {
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 50px;
+  }
+
+  #aumentarAnchura {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+  }
+
+  .parrafo-movil{
+    padding: 10%;
+    position: absolute;
+    top: 250px;
+    left: 750px;
+    border: solid 2px yellow;
+  }
