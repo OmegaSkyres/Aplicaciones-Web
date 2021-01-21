@@ -92,3 +92,58 @@
     left: 750px;
     border: solid 2px yellow;
   }
+
+  #superficie:hover {
+    cursor:crosshair;
+  }
+
+ /* #superficie{
+   position: absolute;
+   top: 250px;
+   left: 750px;
+   color:khaki;
+   width: 50%;
+ } */
+
+span.indicador {
+  border: 1px solid red;
+  padding: 5px;
+}
+span.activo {
+  background-color: rgba(255,0,0,0.2);
+}
+
+#region1{
+  position: absolute;
+  top: 350px;
+  left: 350px;
+  background-color:khaki;
+  width: 20%;
+  height: 10%;
+}
+
+#region2{
+  position: absolute;
+  top: 350px;
+  left: 950px;
+  background-color:khaki;
+  width: 20%;
+  height: 10%;
+}
+
+#contenedor{
+  background-color: lawngreen;
+  height: 500px;
+  border: solid 4px red;
+  border-style: dotted;
+}
+
+#superficie {
+  display: none;
+  border: 2px dashed green;
+  width: 300px;
+  height: 200px;
+  background-color: lightgreen;
+  }
+  
+  
