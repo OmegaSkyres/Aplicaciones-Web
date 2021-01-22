@@ -1,7 +1,7 @@
 $(function () {
     let tags =[];
 	//Show task's text
-    $('#search').on('keyup', function () {
+    $('#descripcion').on('keyup', function () {
 		let valor = $(event.target).prop('value').trim();
 		$('#vistaPrevia').text(valor);
 	});
@@ -27,18 +27,16 @@ $(function () {
 	})
 	//Parse task's text and tags
 	$('#buttonF').on("click", function (e) {
-		let valor = $('#vistaPrevia').text().trim();
-		let final = valor.replace(/@\w*/g, "").trim();
-		console.log(final);
-		if (final == "") {
+		let valor = $('#descripcion').prop('value').trim();
+		if (valor == "") {
 			alert("La tarea no puede ser vacia");
 			e.preventDefault();
 			return;
 		}
 		tags.forEach(e => {
-			final += e;
+			valor += e;
 		});
-		$('#text').val(final);
+		$('#text').val(valor);
 	});
 
 
