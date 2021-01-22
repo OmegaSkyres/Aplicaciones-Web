@@ -64,12 +64,13 @@
                <div class="form"> 
                     <form action="/addTask" method="POST">
                          <label id="nombreT">NOMBRE DE TAREA:</label>
-                         <input type="text" id="search" name="text" required>
+                         <input type="text" id="search" name="texto" required>
                          <div class="formtags">
                               <input type="text" id="tags" name="tags">
                               <input type="button" id="button" value="AÑADIR TAG">
                          </div>
                          <div id="vistaPrevia"><h3 id="mensaje"></h3></div>
+                         <input id="text" type="text" name="text" value="" hidden>
                          <input type="submit" id="buttonF" value="AÑADIR">
                          
                     </form>

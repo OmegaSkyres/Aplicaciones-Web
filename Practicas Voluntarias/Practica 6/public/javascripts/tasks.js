@@ -25,6 +25,21 @@ $(function () {
 		let tag = $(this).attr('id');
 		$(this).remove(); //Remove no lleva parametro
 	})
+	//Parse task's text and tags
+	$('#buttonF').on("click", function (e) {
+		let valor = $('#vistaPrevia').text().trim();
+		let final = valor.replace(/@\w*/g, "").trim();
+		console.log(final);
+		if (final == "") {
+			alert("La tarea no puede ser vacia");
+			e.preventDefault();
+			return;
+		}
+		tags.forEach(e => {
+			final += e;
+		});
+		$('#text').val(final);
+	});
 
 
 
