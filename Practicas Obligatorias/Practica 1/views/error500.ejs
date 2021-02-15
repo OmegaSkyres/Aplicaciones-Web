@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>ERROR 500</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/errors.css" media="screen">
+    <link rel="icon" type="img/png" href="/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+</head>
+
+<body class="error">
+    <h1>500 - Error interno del servidor</h1>
+    <div class="mensaje">
+        <p>Se ha producido el siguiente error: <%= mensaje %> </p>
+        <p>Pila de ejecución:</p>
+        <pre> <%= pila %> </pre>
+    </div>
+
+</body>
+
+</html>

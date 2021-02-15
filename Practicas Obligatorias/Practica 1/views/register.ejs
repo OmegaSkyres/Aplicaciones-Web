@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="styles/loginScreen.css" media="screen"/> 
+</head>
+<body>
+   <div class="panelPrincipal">
+        <div class="titulo">
+               <h1>404</h1>
+        </div>
+          <div class="form"> 
+               <form action="procesar_register" method="POST" enctype="multipart/form-data">
+                    <label id="label1" for="Name">Correo *</label>
+                    <input type="text" id="search1" name="email" required>
+                    <label id="label2" for="Name">Contraseña *</label>
+                    <input type="password" id="search2" name="password" required>
+                    <label id="label2" for="Name">Confirmar Contraseña *</label>
+                    <input type="password" id="search3" name="password2" required>
+                    <label id="label2" for="Name">Nickname *</label>
+                    <input type="text" id="search4" name="nickname" required>
+                    <label id="label2" for="Name">Imagen de Perfil</label>
+                    <input type="file" name="adjunto" accept=".jpg,.png">
+                    <input type="submit" id="button2" value="Crear Cuenta">
+                    <a href="login" id ="button2">Iniciar Sesión </a>
+               </form>
+
+               <%if(msg != null){%>
+                    <p id="mensajeError"><%=msg%></p>
+               <%}%>
+               
+          </div>
+     </div>
+
+   </div>
+    
+</body>
+</html>

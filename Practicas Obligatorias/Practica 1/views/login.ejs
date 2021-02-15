@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="styles/loginScreen.css" media="screen"/> 
+</head>
+<body>
+   <div class="panelPrincipal">
+        <div class="titulo">
+               <h1>404</h1>
+        </div>
+          <div class="form"> 
+               <form action="procesar_login" method="POST">
+                    <label id="label1" for="Name">Correo *</label>
+                    <input type="text" id="email" name="email" required>
+                    <label id="label2" for="Name">Contraseña *</label>
+                    <input type="password" id="password" name="password" required>
+                    <input type="submit" id="button1" value="Iniciar Sesion">
+                    <a href="register" id ="button2">Crear Cuenta</a>
+                
+               </form>
+               <%if(errorMsg != null){%>
+                    <p id="mensajeError"><%=errorMsg%></p>
+               <%}%>
+          </div>
+     </div>
+
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="/images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="/styles/newQuestion.css" media="screen"/> 
+</head>
+<body>
+    <%- include("header", {username : username, imagen : image, idUser : userid}) %>
+
+    <div class="panelPrincipal">
+        <div id="cabecera">
+            <h2>Formular una pregunta</h2>
+        </div>
+        <div id="formulario">
+            <form action="process_question" method="POST"
+                <label id="label1" for="Name"><strong>Titulo</strong></label>
+                <label id="label2" for="Name">Se especifica e imagina que estas haciendo la pregunta a otra persona</label>
+                <input type="text" id="tituloPregunta" name="titulo" placeholder="¿Cuál es tu pregunta?" required>
+                <br>
+                <label id="label3" for="Name"><strong>Cuerpo</strong></label>
+                <label id="label4" for="Name">Incluye toda la información que alguien necesitaria para responder tu pregunta</label>
+                <textarea name="cuerpo" id="cuerpo" rows="10" cols="50" required></textarea>
+                <br>
+                <label id="label5" for="Name"><strong>Etiquetas</strong></label>
+                <label id="label6" for="Name">Añade hasta 5 etiquetas para descubrir sobre que trata tu pregunta</label>
+                <input type="text" id="tituloPregunta" name="etiquetas" placeholder="Por ejemplo: @node@express">
+                <div id="botonera">
+                    <input type="submit" id="boton" value="Publicar tu pregunta">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
