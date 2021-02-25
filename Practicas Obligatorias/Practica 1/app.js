@@ -91,7 +91,9 @@ app.use(function(error, request, response, next) {
 
 //------------------------------------------Arranque del Servidor-----------------------------------------------//
 
-app.listen(3000, function(err) {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function(err) {
     if (err) {
         console.error("No se pudo inicializar el servidor: " +
             err.message);
