@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="/styles/home.css" media="screen"/>
+</head>
+<body>
+    <header>
+		<div class="encabezado">
+            <div class="parte1">
+                <div class="botonera">
+                    <a href="/questions">Preguntas</a>
+                    <a href="/questions/unansweredQuestions">Sin responder</a>
+                    <a href="/users">Usuarios</a>
+                </div>
+                <div class="titulo">
+                    <a href="/questions">404</a>
+                </div>
+                <div class="informacionUsuario">
+                    <img src="/imagen/<%=imagen%>">
+                    <a id="userName" href="/users/profile/<%= idUser %>"><strong> <%= username %> </strong></a>
+                </div>
+            </div>
+            <div class="parte2">
+                <form id="busqueda" action="/questions/process_search" method="POST">
+                    <input type="submit" id="button1" value="Buscar">
+                    <input type="text" id="search1" name ="texto" placeholder="Buscar por titulo/cuerpo de pregunta">
+                    <a id="botonSalir" href="/logout">Cerrar Sesion</a>
+                </form>
+            </div>
+       </div>
+	</header>
+</body>
+</html>

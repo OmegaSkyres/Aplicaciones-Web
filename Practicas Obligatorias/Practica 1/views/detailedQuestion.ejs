@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="/images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="/styles/detailedQuestion.css" media="screen"/>
+</head>
+<body>
+    <%- include("header", {username : username, imagen : image, idUser : userid}) %>
+
+
+    <div class="panelPrincipal">
+
+        <div class="pregunta">
+            <div class="tituloPregunta">
+                <h2><%= question.titulo %></h2>
+            </div>
+            <div id="vistas"><div id="numVistas">Vista <%=question.numvisits%> veces</div></div>
+            <div id="votos">
+                <div id="vote"> <%=question.numvotes%> Votos</div>
+                <a href="/questions/positiveVote/<%= question.id %>" name = "positive_vote" id="positive_vote" ><img id="manoArriba"src="/images/like2.png"></a>
+                <a href="/questions/negativeVote/<%= question.id %>" name = "negative_vote" id="negative_vote" ><img id="manoAbajo" src="/images/dislike-icon2.png"></a>
+            </div>
+            <div id="cuerpo"><%= question.cuerpo %></div>
+            <div class="etiquetas">
+                <% question.etiquetas.forEach(function(e){ %>
+                    <a href ="/questions/filterTag/<%= e %>" name = "etiqueta" id="etiqueta"><%= e %></a>
+                <% }) %>
+            </div>
+            <div id="fecha">Formulada el <%= question.fecha %> </div>
+            <img id="imagen"src="/imagen/<%=question.imagen%>">
+            <div id="nombre">
+                <a id="userName1" href="/users/profile/<%= question.idUsuario %>"><strong> <%= question.username %> </strong></a>
+            </div>
+        </div>
+        <div class="numRespuestas">
+            <h2><%=question.replys.length%> Respuestas</h2>
+        </div>
+        <% question.replys.forEach(function(r){ %>
+            <div class="respuesta">
+                <div id="votos">
+                    <div id="vote"><%=r.numvotos%> Votos</div>
+                    <a href="/reply/positiveVote/<%= r.idR %>" name = "positive_vote" id="positive_vote" ><img id="manoArriba"src="/images/like2.png"></a>
+                    <a href="/reply/negativeVote/<%= r.idR %>" name = "negative_vote" id="negative_vote" ><img id="manoAbajo" src="/images/dislike-icon2.png"></a>
+                </div>
+                <div id="cuerpo"><%=r.cuerpoR%></div>
+                <div id="fecha">Formulada <%=new Date(r.fechaR).getDate() + "-" + (new Date(r.fechaR).getMonth() + 1) + "-" + new Date(r.fechaR).getFullYear()%></div>
+                <img id="imagen"src="/imagen/<%=r.imagen%>">
+                <div id="nombre">
+                    <a id="userName1" href="/users/profile/<%= r.usuarioR %>"><strong> <%= r.username %> </strong></a>
+                </div>
+
+            </div>
+        <% }) %>
+        <div class="responder">
+            <h2>Tu respuesta</h2>
+            <form action="/reply/process_reply/<%= question.id%>" method="POST">
+                <textarea name="cuerpo" id="cuerpoPregunta" rows="10" cols="200" required></textarea>
+                <input type="submit" id="boton" value="Publica tu respuesta">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

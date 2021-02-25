@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    /* border: solid red 1px; */
+}
+
+html, body {
+    height: 100%;
+}
+
+.panelPrincipal{
+    padding-top: 304px;
+}
+
+.cabecera{
+    margin-left: 16%;
+    margin-right: 22%;
+    margin-top: 20px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.cabecera h2{
+    text-align: center;
+    align-items: center;
+}
+
+.cabecera h3{
+    text-align: center;
+    align-self: center;
+}
+
+#button2{
+    text-decoration: none;
+    font-size: 17px;
+    color: snow;
+    margin: 10px;
+    background-color:steelblue;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+}
+
+#button2:hover{
+    background-color:rgb(140, 189, 230);
+    color: rgb(29, 56, 78);
+}
+
+#button2:active{
+    background-color:steelblue;
+    color: snow;
+}
+
+.preguntas{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.tarjeta{
+    display: grid;
+    border: solid steelblue 2px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.027);
+    align-items: flex-start;
+}
+
+.tarjeta:hover{
+    border: solid rgb(146, 191, 228) 2px;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/span 1;
+    grid-row: 1/span 4;
+   
+}
+#imagen{
+    margin: 5px;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+#usuario{
+   text-decoration: none;
+   color: steelblue;
+}
+
+#titulo{
+    grid-column: 2/ span 200;
+    grid-row: 1/ span 2;
+    color: steelblue;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+
+#cuerpo{
+    grid-column: 2/ span 200;
+    grid-row: 3/ span 2;
+    text-decoration: rgb(48, 48, 48);
+    margin: 5px;
+    margin-left: 15px;
+}
+
+#titleQuestion{
+    text-decoration: none;
+    color: steelblue;
+}
+
+
+.etiquetas{
+    display: flex;
+    flex-direction: row;
+    grid-column: 2/ span 2;
+    grid-row: 5/ span 1;
+    margin: 5px;
+    margin-left: 15px;
+
+
+}
+
+#etiqueta{
+    color: cornflowerblue;
+    border: solid CornflowerBlue 2px;
+    border-radius: 10px;
+    margin-right: 5px;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#fecha{
+    color: rgb(41, 41, 41);
+    grid-column: 1/span 1;
+    grid-row: 5/span 1;
+    font-size: 9px;
+}

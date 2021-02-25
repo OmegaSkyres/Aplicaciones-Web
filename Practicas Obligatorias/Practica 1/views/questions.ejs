@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="/images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="/styles/questions.css" media="screen"/> 
+</head>
+<body>
+    <%- include("header", {username : username, imagen : image, idUser : userid}) %>
+   <div class="panelPrincipal">
+        <div class="cabecera">
+            <h3><%= questions.length %> preguntas</h3>
+            <h2><%= questions.title %></h2>
+            <a href="/questions/createQuestion" id="button2">Formular una pregunta</a>
+        </div>
+        <div class="preguntas">
+                <% questions.forEach(function(q){ %>
+                    <div class="tarjeta">
+                        <div id="titulo"><a id="titleQuestion" href="/questions/<%= q.id %>"><strong><%= q.titulo %></strong></a></div>
+                        <div id="cuerpo" maxlength = 150><%= q.cuerpo %></div>
+                        <div class="etiquetas">
+                            <% q.etiquetas.forEach(function(e){ %>
+                                <a href ="/questions/filterTag/<%= e %>" name = "etiqueta" id="etiqueta"><%= e %></a>
+                            <% }); %>
+                        </div>
+                        <div class= "perfil">
+                            <img id="imagen" src="/imagen/<%=q.imagen%>">
+                            <div><a id="usuario" href="/users/profile/<%= q.idUsuario %>"><strong> <%= q.username %> </strong></a></div>
+                        </div>
+                        <div id="fecha">Formulada el <%= q.fecha %></div>
+                    </div>
+                <% }) %>
+
+        </div>
+   </div>
+</body>
+</html>

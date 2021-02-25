@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="/images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="/styles/profile.css" media="screen"/> 
+</head>
+<body>
+    <%- include("header", {username : username, imagen : image, idUser : userid}) %>
+   <div class="cuadro">
+        <div class="perfil">
+            <img id="imagen" src="/imagen/<%=userData.imagen%>">
+            <div><strong><%=userData.username%></strong></div>
+            <div>Miembro desde el <%=new Date(userData.fecha_creacion).getDate() + "-" + (new Date(userData.fecha_creacion).getMonth() + 1) + "-" + new Date(userData.fecha_creacion).getFullYear()%></div>
+        </div>
+
+        <div id="estadisticas"> ESTADISTICAS</div>
+
+        <div class="numeros">
+            <div><strong>REPUTACION:</strong>  <%=userData.reputacion%></div>
+            <div><strong>PREGUNTAS:</strong>   <%=userData.npreguntas%></div>
+            <div><strong>RESPUESTAS:</strong>  <%=userData.nrespuestas%></div>
+        </div>
+
+        <div id="titulo"><p id="tituloMedallas">MEDALLAS</p></div>
+        <div id="medallas">
+
+            <div class="cuadroOro">
+                <div class="oro">
+                    <p>ORO</p>
+                    <% if(medals[2].oros[0].length == 0){ %>
+                        <p>0</p>
+                    <% } else { %>
+                        <p><%=medals[2].oros[0][0].numoro%></p>
+                    <% } %>
+                    
+                </div>
+
+                <div class = "listaMedallas">
+                    <% medals[2].oros[0].forEach(function(m){ %>
+                        <% if(m.numero > 1){ %>
+                            <p id="medallaOro"><%=m.nombre%> X<%=m.numero%></p>
+                        <% } else { %>
+                            <p id="medallaOro"><%=m.nombre%></p>
+                        <% } %>
+                        
+                    <% }); %> 
+                </div>
+            </div>
+
+            <div class="cuadroPlata">
+                <div class="plata">
+                    <p>PLATA</p>
+                    <% if(medals[1].platas[0].length == 0){ %>
+                        <p>0</p>
+                    <% } else { %>
+                        <p><%=medals[1].platas[0][0].numplata%></p>
+                    <% } %>
+                   
+                </div>
+
+                <div class = "listaMedallas">
+                    <% medals[1].platas[0].forEach(function(m){ %>
+                        <% if(m.numero > 1){ %>
+                            <p id="medallaPlata"><%=m.nombre%> X<%=m.numero%></p>
+                        <% } else { %>
+                            <p id="medallaPlata"><%=m.nombre%></p>
+                        <% } %>
+                    <% }); %> 
+                </div>
+
+            </div>
+
+            <div class="cuadroBronce">
+                <div class="bronce">
+                    <p>BRONCE</p>
+                    <% if(medals[0].bronces[0].length == 0){ %>
+                        <p>0</p>
+                    <% } else { %>
+                        <p><%=medals[0].bronces[0][0].numbronce%></p>
+                    <% } %>
+                </div>
+
+                <div class = "listaMedallas">
+                    <% medals[0].bronces[0].forEach(function(m){ %>
+                        <% if(m.numero > 1){ %>
+                            <p id="medallaBronce"><%=m.nombre%> X<%=m.numero%></p>
+                        <% } else { %>
+                            <p id="medallaBronce"><%=m.nombre%></p>
+                        <% } %>
+                    <% }); %>  
+                </div>
+            </div>
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link href="/images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="/styles/usersList.css" media="screen"/>
+</head>
+<body>
+    <%- include("header", {username : username, imagen : image, idUser : userid}) %>
+
+    <div class="cuadro">
+        <div class="title"><%=users.title%></div>
+        <form id="buscador" action="/users/process_searchUsu" method="POST">
+            <input type="submit" id="button2" value="Fitrar">
+            <input type="text" id="search2" name="user" placeholder="Filtrar por Usuario">
+        </form>
+
+        <div class="listaUsuarios">
+            <% users.forEach(function(user){ %>
+                <div  class="usuario">
+                    <img id ="imagen" src="/imagen/<%= user.imagen %>">
+                    <a id="nombre" href="/users/profile/<%= user.idUsuario %>"><strong> <%= user.username %> </strong></a>
+                    <p id="reputacion"><%= user.reputacion %></p>
+
+                    <% if(user.netiqueta){ %>
+                        <a href ="/questions/filterTag/<%= user.netiqueta %>" id="etiqueta"><%= user.netiqueta %></a>
+                    <% } %>
+                </div>
+           <% }) %>
+        </div>
+    </div>
+</body>
+</html>
+
