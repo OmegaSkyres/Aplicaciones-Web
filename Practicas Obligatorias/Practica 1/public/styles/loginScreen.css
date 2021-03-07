@@ -91,3 +91,125 @@ div.panelPrincipal h1{
 #mensajeError{
     color: rgb(180, 1, 1);
 }
+
+
+#button1{
+    font-size: 17px;
+    color: snow;
+    align-self: center;
+    width: 35%;
+    margin: 10px;
+    background-color:steelblue;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+}
+#button1:hover{
+    background-color: skyblue;
+    cursor: pointer;
+}
+
+#button2{
+    font-size: 17px;
+    text-decoration: none;
+    text-align: center;
+    color: snow;
+    align-self: center;
+    width: 35%;
+    margin: 10px;
+    background-color:steelblue;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+}
+
+#button2:hover{
+    background-color: skyblue;
+    cursor: pointer;
+}
+
+#mensajeError{
+    color: rgb(180, 1, 1);
+}
+
+@media (max-width: 1200px) {
+    .form {
+        color: snow;
+        border: solid 3px steelblue;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        margin: 10px;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.123);
+    }
+    #button1{
+        font-size: 17px;
+        color: snow;
+        align-self: center;
+        width: 40%;
+        margin: 10px;
+        background-color:steelblue;
+        border-color: #d8d8d8;
+        border-width: 3px;
+        border-style: solid;
+        border-radius:35px;
+    }
+    #button2{
+        font-size: 17px;
+        text-decoration: none;
+        text-align: center;
+        color: snow;
+        align-self: center;
+        width: 40%;
+        margin: 10px;
+        background-color:steelblue;
+        border-color: #d8d8d8;
+        border-width: 3px;
+        border-style: solid;
+        border-radius:35px;
+    }
+  }
+
+@media (max-width: 600px) {
+    .form {
+        color: snow;
+        border: solid 3px steelblue;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        margin: 10px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.123);
+    }
+    #button1{
+        font-size: 17px;
+        color: snow;
+        align-self: center;
+        width: 50%;
+        margin: 10px;
+        background-color:steelblue;
+        border-color: #d8d8d8;
+        border-width: 3px;
+        border-style: solid;
+        border-radius:35px;
+    }
+    #button2{
+        font-size: 17px;
+        text-decoration: none;
+        text-align: center;
+        color: snow;
+        align-self: center;
+        width: 50%;
+        margin: 10px;
+        background-color:steelblue;
+        border-color: #d8d8d8;
+        border-width: 3px;
+        border-style: solid;
+        border-radius:35px;
+    }
+  }
